@@ -46,4 +46,15 @@ Currently, the only top-level property that is excluded from inheritance is [`re
 }
 ```
 
+`@my-team/tsconfig-base/tsconfig.json`:
+
+```json tsconfig
+{
+  "extends": "@my-team/tsconfig-base",
+  "compilerOptions": {
+    "strictNullChecks": false
+  }
+}
+```
+
 Properties with relative paths found in the configuration file, which aren't excluded from inheritance, will be resolved relative to the configuration file they originated in.
