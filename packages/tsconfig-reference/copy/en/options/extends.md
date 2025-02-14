@@ -4,7 +4,7 @@ oneline: "Specify one or more path or node module references to base configurati
 ---
 
 The value of `extends` is a string which contains a path to another configuration file to inherit from.
-The path may use Node.js style resolution.
+The path may use Node.js style resolution. It is also possible to extend from a package. TypeScript 3.2 now resolves `tsconfig.json` from `node_modules` when using a bare path for the `extends` field, so TypeScript will dive into `node_modules` packages for us.
 
 The configuration from the base file are loaded first, then overridden by those in the inheriting config file. All relative paths found in the configuration file will be resolved relative to the configuration file they originated in.
 
